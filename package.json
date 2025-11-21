@@ -1,0 +1,21 @@
+{
+  "name": "template-hudl-legacy-navigation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A reusable React navigation component based on Hudl's legacy navigation pattern",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@adam-porter/shared-uniform-styles": "github:adam-porter/shared-uniform-styles",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
+  }
+}
