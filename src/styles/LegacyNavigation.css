@@ -1,26 +1,31 @@
 .legacy-navigation {
-  background-color: var(--u-color-base-foreground-contrast, #1f1f1f);
+  background-color: #101417;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--u-color-line-subtle, #333);
+  height: 56px;
+  border-bottom: none;
 }
 
 .nav-container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 var(--u-space-one, 16px);
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 56px;
-  gap: var(--u-space-one, 16px);
+  gap: 0;
 }
 
 /* Brand/Logo */
 .nav-brand {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--u-space-one, 16px);
 }
 
 .hudl-logo {
@@ -37,7 +42,7 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background-color: #ff6b35;
+  background-color: transparent;
   border-radius: var(--u-border-radius-small, 4px);
   color: var(--u-color-emphasis-foreground-reversed, #fff);
   font-weight: var(--u-font-weight-bold, 700);
@@ -45,9 +50,9 @@
 }
 
 .logo-text {
-  color: var(--u-color-emphasis-foreground-reversed, #fff);
-  font-weight: var(--u-font-weight-medium, 500);
-  font-size: var(--u-font-size-medium, 16px);
+  color: var(--u-color-emphasis-foreground-reversed, #C0C6CD);
+  font-weight: var(--u-font-weight-heavy, 700);
+  font-size: var(--u-font-size-medium, 14px);
   letter-spacing: var(--u-letter-spacing-default, 0px);
 }
 
@@ -59,25 +64,31 @@
   margin: 0;
   padding: 0;
   flex: 1;
+  height: 100%;
 }
 
 .nav-item {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-link {
-  display: block;
-  padding: var(--u-space-three-quarter, 12px) var(--u-space-three-quarter, 12px);
-  color: var(--u-color-base-foreground, #666);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--u-space-three-quarter, 12px);
+  height: 100%;
+  color: #C0C6CD;
   text-decoration: none;
-  font-size: var(--u-font-size-small, 13px);
+  font-size: var(--u-font-size-small, 14px);
   font-weight: var(--u-font-weight-medium, 500);
   transition: color 0.2s ease;
   white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: var(--u-color-emphasis-foreground-reversed, #fff);
+  color: #FEFEFE;
 }
 
 .nav-submenu {
@@ -125,6 +136,8 @@
   align-items: center;
   gap: var(--u-space-one, 16px);
   flex-shrink: 0;
+  height: 100%;
+  padding: 0 var(--u-space-one, 16px);
 }
 
 .nav-toggle {
@@ -177,7 +190,6 @@
   font-weight: var(--u-font-weight-bold, 700);
   color: var(--u-color-emphasis-foreground-reversed, #fff);
   transition: all 0.2s ease;
-  font-family: var(--u-font-body, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif);
 }
 
 .upload-btn {
@@ -235,7 +247,7 @@
   border: none;
   color: var(--u-color-emphasis-foreground-reversed, #fff);
   cursor: pointer;
-  font-size: var(--u-font-size-small, 13px);
+  font-size: 14px;
   font-weight: var(--u-font-weight-medium, 500);
   border-radius: var(--u-border-radius-small, 4px);
   transition: background-color 0.2s ease;
@@ -251,9 +263,11 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  background-color: var(--u-color-background-container, #555);
+  background-color: #38434F;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   font-size: var(--u-font-size-x-small, 12px);
+  font-weight: 700;
   flex-shrink: 0;
 }
 
@@ -275,14 +289,16 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: var(--u-color-background-container-secondary, #2a2a2a);
-  border: 1px solid var(--u-color-line-subtle, #444);
-  border-radius: var(--u-border-radius-small, 4px);
+  background-color: #191F24;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--u-border-radius-medium, 8px);
   min-width: 160px;
   list-style: none;
   padding: var(--u-space-half, 8px) 0;
-  margin: var(--u-space-quarter, 4px) 0 0 0;
+  margin: 8px 0 0 0;
   z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .profile-dropdown li {
@@ -292,26 +308,27 @@
 .profile-dropdown a {
   display: block;
   padding: var(--u-space-half, 8px) var(--u-space-one, 16px);
-  color: var(--u-color-base-foreground, #666);
+  color: #C0C6CD;
   text-decoration: none;
-  font-size: var(--u-font-size-small, 13px);
-  transition: color 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
 .profile-dropdown a:hover {
-  color: var(--u-color-emphasis-foreground-reversed, #fff);
-  background-color: var(--u-color-background-container, #333);
+  color: #FEFEFE;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .profile-dropdown .divider {
   height: 1px;
-  background-color: var(--u-color-line-subtle, #444);
+  background-color: rgba(255, 255, 255, 0.1);
   margin: var(--u-space-quarter, 4px) 0;
   cursor: default;
 }
 
 .profile-dropdown .divider:hover {
-  background-color: var(--u-color-line-subtle, #444);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* More Menu Toggle */

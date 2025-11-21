@@ -19,6 +19,7 @@ const LegacyNavigation = ({
   menuItems = defaultMenuItems,
   userName = 'Adam Porter',
   userAvatar = null,
+  logoIcon = null,
   onMenuItemClick,
   onUploadClick,
   onProfileClick
@@ -50,7 +51,9 @@ const LegacyNavigation = ({
         {/* Brand/Logo */}
         <div className="nav-brand">
           <div className="hudl-logo">
-            <span className="logo-icon">H</span>
+            <span className="logo-icon">
+              {logoIcon || 'H'}
+            </span>
             <span className="logo-text">Hudl</span>
           </div>
         </div>
@@ -122,7 +125,7 @@ const LegacyNavigation = ({
               aria-label="User profile menu"
             >
               <span className="profile-avatar">
-                {userAvatar ? userAvatar : <Icon name="user" />}
+                {userAvatar || 'AP'}
               </span>
               <span className="profile-name">{userName}</span>
               <Icon name="chevron-down" className={`profile-chevron ${isProfileOpen ? 'active' : ''}`} />
